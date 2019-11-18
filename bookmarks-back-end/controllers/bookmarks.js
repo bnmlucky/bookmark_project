@@ -27,7 +27,7 @@ bookmarks.post('/', (req, res) => {
 
     })
 })
-
+//delete
 bookmarks.delete('/:id', (req, res) => {
     Bookmark.findByIdAndRemove(req.params.id, (error, deletedBookmark) => {
         if (error) {
@@ -36,6 +36,16 @@ bookmarks.delete('/:id', (req, res) => {
         res.status(200).send(deletedBookmark)
 
     })
+})
+//update
+bookmarks.put('/:id', (req, res) => {
+    Bookmark.findByIdAndUpdate(req.params.id, req.body, { new: true }, (error, updatedBookmark) => {
+        if (error) {
+            res.status(400).json({ error: errormessage })
+        }
+        res.status(200).send(updatedBookmark)
+    })
+})
 
 
 
@@ -43,4 +53,4 @@ bookmarks.delete('/:id', (req, res) => {
 
 
 
-    module.exports = bookmarks
+module.exports = bookmarks
