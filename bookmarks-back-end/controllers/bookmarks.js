@@ -8,6 +8,7 @@ const Bookmark = require('../models/bookmarks.js')
 //index - get
 bookmarks.get('/', (req, res) => {
     //res.send('BOOKMARKS WITH Natalia and Pam!')
+    //this will display the bookmarks on the browser as an array of objects
     Bookmark.find({}, (error, foundBookmarks) => {
         if (error) {
             res.status(400).json({ error: errormessage })
