@@ -24,6 +24,10 @@ class NewBoookmark extends Component {
     handleSubmit(event) {
         event.preventDefault()
         this.props.addBookmark(this.state.title, this.state.url);
+        this.setState({
+            title: '',
+            url: ''
+        });
     }
 
     render() {

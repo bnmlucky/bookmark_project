@@ -17,6 +17,7 @@ class Backend {
         title: title,
         url: url
       })
+
   }
 
   async deleteBookmark(id) {

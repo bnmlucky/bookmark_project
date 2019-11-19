@@ -38,6 +38,7 @@ class App extends Component {
   async addBookmark(title, url) {
     await this.backend.addBookmark(title, url)
     this.refresh()
+
   }
 
   async deleteBookmark(id) {
