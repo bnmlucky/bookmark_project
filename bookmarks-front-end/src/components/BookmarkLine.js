@@ -6,6 +6,10 @@ class BookmarkLine extends Component {
         this.props.deleteBookmark(id)
     }
 
+    updatedBookmark(id) {
+        this.props.updatedBookmark(id)
+    }
+
     render() {
         return (
             <div>
@@ -13,7 +17,8 @@ class BookmarkLine extends Component {
                     {this.props.title}
                 </a>
                 <button onClick={this.deleteBookmark.bind(this, this.props.id)}>Delete</button>
-            </div>
+                <button onClick={() => this.updatedBookmark(this.props.id, this.props.title, this.props.url)}>Edit</button>
+            </div >
         )
     }
 }

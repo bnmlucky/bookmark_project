@@ -8,7 +8,7 @@ class BookmarkList extends Component {
                 {this.props.bookmarks.map(item => {
                     return (
                         <li key={item._id}>
-                            <BookmarkLine id={item._id} title={item.title} url={item.url} deleteBookmark={this.props.deleteBookmark} />
+                            <BookmarkLine id={item._id} title={item.title} url={item.url} deleteBookmark={this.props.deleteBookmark} updatedBookmark={this.props.updatedBookmark} />
                         </li>)
                 })}
             </ul>

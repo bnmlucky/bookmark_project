@@ -23,6 +23,11 @@ class Backend {
   async deleteBookmark(id) {
     await axios.delete(`${this.bookmarksUrl}/${id}`)
   }
+
+
+  async updatedBookmark(selectedBookmark, id) {
+    await axios.put(`${this.bookmarksUrl}/${id}`, selectedBookmark)
+  }
 }
 
 export default Backend;
