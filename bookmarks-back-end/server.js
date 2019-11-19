@@ -2,12 +2,12 @@ const express = require("express");
 const app = express();
 const bookmarksController = require('./controllers/bookmarks.js')
 const port = 3003
-const mongoose = require('mongoose')
-
-
+const mongoose = require('mongoose');
+const cors = require('cors')
 
 // middleware
 app.use(express.json());
+app.use(cors())
 app.use('/bookmarks', bookmarksController)
 
 
