@@ -26,5 +26,4 @@ class Backend {
 }
 
 
-
 export default Backend;

@@ -1,12 +1,11 @@
 import React, { Component } from 'react'
-import '../App.css'
 
 class NewBoookmark extends Component {
     constructor(props) {
         super(props);
         this.state = {
             title: '',
-            url: '',
+            url: ''
         }
         this.handleTitleChange = this.handleTitleChange.bind(this);
         this.handleUrlChange = this.handleUrlChange.bind(this);
@@ -45,13 +44,13 @@ class NewBoookmark extends Component {
                     </label>
                     <label>
                         Url:
-                    <input type="text"
+                    <input type="url"
                             id="url"
                             name="url"
                             value={this.state.url}
                             onChange={this.handleUrlChange}
                             placeholder="Url"></input>
-                        <input type="submit" id="submitBtn" value="Add" />
+                        <input type="submit" value="Add" />
                     </label>
                 </form>
             </div>

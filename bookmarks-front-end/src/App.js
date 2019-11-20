@@ -46,7 +46,6 @@ class App extends Component {
     this.refresh()
   }
 
-
   render() {
     return (
       <div>
