@@ -31,26 +31,28 @@ class NewBoookmark extends Component {
 
     render() {
         return (
-            <div>
+            <div className="new-entry">
                 <form onSubmit={this.handleSubmit}>
-                    <label>
+                    <label class="label">
                         Title:
                     <input type="text"
                             id="title"
                             name="title"
                             value={this.state.title}
                             onChange={this.handleTitleChange}
-                            placeholder="Title"></input>
+                            placeholder="Title"
+                            class="inputfield"></input>
                     </label>
-                    <label>
+                    <label class="label">
                         Url:
                     <input type="url"
                             id="url"
                             name="url"
                             value={this.state.url}
                             onChange={this.handleUrlChange}
-                            placeholder="Url"></input>
-                        <input type="submit" value="Add" />
+                            placeholder="Url"
+                            class="inputfield"></input>
+                        <input type="submit" class="btn-add" value="Add" />
                     </label>
                 </form>
             </div>
