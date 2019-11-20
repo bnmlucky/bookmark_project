@@ -9,7 +9,6 @@ class NewBoookmark extends Component {
         }
         this.handleTitleChange = this.handleTitleChange.bind(this);
         this.handleUrlChange = this.handleUrlChange.bind(this);
-
         this.handleSubmit = this.handleSubmit.bind(this);
     }
 
