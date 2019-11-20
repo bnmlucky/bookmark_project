@@ -15,7 +15,7 @@ class App extends Component {
     this.getBookmarks = this.getBookmarks.bind(this)
     this.addBookmark = this.addBookmark.bind(this);
     this.deleteBookmark = this.deleteBookmark.bind(this);
-    this.updatedBookmark = this.updatedBookmark.bind(this);
+    this.updateBookmark = this.updateBookmark.bind(this);
     this.refresh = this.refresh.bind(this);
 
     this.backend = new Backend();
@@ -47,20 +47,20 @@ class App extends Component {
     this.refresh()
   }
 
-  async updatedBookmark(id, title, url) {
-    await this.backend.updatedBookmark(id, title, url)
+  async updateBookmark(id, completed) {
+    await this.backend.updateBookmark(id, completed)
     this.refresh()
   }
-
-
-
 
   render() {
     return (
       <div>
         <Title />
         <NewBookmark addBookmark={this.addBookmark} />
-        <BookmarkList bookmarks={this.state.bookmarks} deleteBookmark={this.deleteBookmark} updatedBookmark={this.updatedBookmark} />
+        <BookmarkList
+          bookmarks={this.state.bookmarks}
+          deleteBookmark={this.deleteBookmark}
+          updateBookmark={this.updateBookmark} />
       </div>
     )
   }

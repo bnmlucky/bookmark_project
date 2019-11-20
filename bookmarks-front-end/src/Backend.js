@@ -25,8 +25,8 @@ class Backend {
   }
 
 
-  async updatedBookmark(selectedBookmark, id) {
-    await axios.put(`${this.bookmarksUrl}/${id}`, selectedBookmark)
+  async updateBookmark(id, completed) {
+    await axios.put(`${this.bookmarksUrl}/${id}`, { completed: completed })
   }
 }
 
