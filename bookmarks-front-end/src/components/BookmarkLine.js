@@ -12,18 +12,22 @@ class BookmarkLine extends Component {
 
     render() {
         return (
-            <div>
-                <input
-                    type="checkbox"
-                    checked={"checked" ? this.props.completed : ""}
-                    onClick={() => this.updateBookmark(this.props.id, !this.props.completed)}
-                    onChange={() => { }}>
-                </input>
-                <a href={this.props.url} target="_blank" rel="noopener noreferrer" >
-                    {this.props.title}
-                </a>
-                <button onClick={this.deleteBookmark.bind(this, this.props.id)}>Delete</button>
-            </div >
+            <div class="doublecontainer">
+                <div className="container">
+                    <input
+                        className="item checkbox"
+                        type="checkbox"
+                        checked={"checked" ? this.props.completed : ""}
+                        onClick={() => this.updateBookmark(this.props.id, !this.props.completed)}
+                        onChange={() => { }}>
+                    </input>
+                    <a className="item link" href={this.props.url} target="_blank" rel="noopener noreferrer" >
+                        {this.props.title}
+                    </a>
+                    <button className="item btn-del" onClick={this.deleteBookmark.bind(this, this.props.id)}>Delete</button>
+
+                </div >
+            </div>
         )
     }
 }

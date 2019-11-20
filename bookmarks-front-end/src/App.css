@@ -20,3 +20,90 @@
 .App-link {
   color: #09d3ac;
 }
+
+body {
+  background: linear-gradient(rgba(150,154,163, .5),rgba(150,154,163, .5)),
+  url('./images/swirl_pattern.png');
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #b94d5c;
+  font-size: 2rem;
+}
+
+.fontsize{
+   font-size: 3em;
+}
+
+.new-entry{
+  margin-bottom: 3%;
+}
+
+.label {
+  margin-right: 4%;
+  color: #621122;
+}
+
+.inputfield {
+  margin: 1% 0.5% 0 0.5%;
+  line-height: 2em;
+  width: 150px;
+  font-size: 1.1em
+}
+
+.btn-add {
+  color: #24090d;
+  line-height: 2em;
+  border-radius: 5px;
+  border: 3px solid #b94d5c;
+  font-size: 1.1em;
+  margin-left: 2%;
+}
+
+.container {
+  /* border: 1px solid red; */
+  margin: 0 500px 0 450px; 
+  display: flex;
+  justify-content: space-between;
+}
+
+.item {
+  margin: 2%;
+  padding: 1%;
+  font-size: 1.2em;
+}
+
+.doublecontainer {
+  /* border: 2px solid turquoise; */
+  margin-right: 25px;
+}
+
+.link {
+  line-height: 2em;
+  text-decoration: none;
+  font-weight: 600;
+  color: #261213;
+}
+
+a:hover{
+  color: #d8574a;
+}
+
+input.checkbox {
+  width: 50px;
+  height: 50px;
+  transform: scale(1.2);
+  background-color: #41B883;
+}
+
+.btn-del {
+  color: #24090d;
+  line-height: 2em;
+  border-radius: 5px;
+  border: 3px solid #b94d5c;
+  font-size: 1.1em;
+  padding: 0 1% 0 1%;
+}
+
